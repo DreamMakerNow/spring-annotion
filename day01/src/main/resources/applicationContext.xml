@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+<!--   扫描指定包及其字包下的注解-->
+    <context:component-scan base-package="com.day01" use-default-filters="true">
+<!--                        排除指定包或者类不进行扫描-->
+<!--        排除指定类型的类的注解不扫描 排除了 User 这个类-->
+<!--        <context:exclude-filter type="assignable" expression="com.day01.pojo.User"/>-->
+<!--        指定排除某个注解不扫描 这里演示了不扫描 @Service-->
+<!--        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>-->
+<!--        切入点排除 原理同之前的切入点 但少了返回值和方法切入点 *(包).*(类)-->
+<!--        com.day01 下所有包及其字包叫 User 这个类的的不进行扫描-->
+<!--        <context:exclude-filter type="aspectj" expression="*..User"/>-->
+<!--        com.day01.pojo 这个包下的所有类不进行扫描-->
+<!--        <context:exclude-filter type="aspectj" expression="com.day01.pojo.*"/>-->
+<!--                包含某个扫描 需要在 context标签中设置 use-default-filters="false" 取消默认扫描所有，改为不扫描，然后添加自己需要扫描的包或者类，-->
+<!--        使用方法同上.   注意不能包含指定base-package="com.day01"外的包或者类-->
+<!--        <context:include-filter type="assignable" expression="com.Test.Person"/>-->
+    </context:component-scan>
+
+<!--    引入 user.properties 文件-->
+<!--    @PropertySource("classpath:/user.properties") 取代-->
+<!--    <context:property-placeholder location="classpath:/user.properties" file-encoding="utf-8"/>-->
+<!--    @Component 注解取代了bean标签-->
+<!--    <bean class="com.day01.pojo.User" id="user" p:id="2"/>-->
+
+</beans>
