@@ -9,4 +9,6 @@ import java.util.List;
 @Repository
 public interface UserDao {
     List<User> selectAllUser();
+    User getUserByName(String name);
+    String getPwd(String name);
 }

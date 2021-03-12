@@ -1,0 +1,125 @@
+#frame {/*----------图片轮播相框容器----------*/
+    position: relative; /*--绝对定位，方便子元素的定位*/
+    width: 1520px;
+    height: 600px;
+    overflow: hidden;/*--相框作用，只显示一个图片---*/
+    border-radius:10px;
+}
+#dis {/*--绝对定位方便li图片简介的自动分布定位---*/
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    opacity: 0.3;
+    z-index: 999;
+}
+#dis{
+    display: inline-block;
+    width: 200px;
+    height: 20px;
+    padding: 20px;
+    margin: 0 50px;
+    font-weight: bold;
+    font-size: 20px;
+    float: left;
+    text-align: center;
+    color: #fff;
+    border-radius: 50% 0;
+    background: #000000;
+}
+#photos img {
+    float: left;
+    width:1520px;
+    height:600px;
+}
+#photos {/*---设置总的图片宽度--通过位移来达到轮播效果----*/
+    position: absolute;z-index:9;
+    width: calc(1520px * 5);/*---修改图片数量的话需要修改下面的动画参数*/
+}
+.play{
+    animation: ma 10s ease-out infinite alternate;/**/
+}
+@keyframes ma {/*---每图片切换有两个阶段：位移切换和静置。中间的效果可以任意定制----*/
+    0%,20% {		margin-left: 0;		}
+    25%,40% {		margin-left: -1520px;	}
+    45%,60% {		margin-left: -4560px;	}
+    65%,80% {		margin-left: -6080px;	}
+    85%,100% {		margin-left: -.7600px;	}
+}
+.num{
+    position:absolute;z-index:10;
+    display:inline-block;
+    right: 500px;
+    top:500px;
+    border-top: 0;
+    border-radius:50% 0;
+    background:#fff;
+    width:50px;
+    height:50px;
+    line-height:50px;
+    cursor:pointer;
+    color:#000;
+    text-align:center;
+    opacity:0.8;
+}
+.num:hover{background-color: #8AE1E8;}
+.num:active,#photos:active{animation-play-state:paused;}
+.num:nth-child(2){margin-right:150px}
+.num:nth-child(3){margin-right:300px}
+.num:nth-child(4){margin-right:450px}
+.num:nth-child(5){margin-right:600px}
+#a1:hover ~ #photos{animation: ma1 .5s ease-out forwards;}
+#a2:hover  ~ #photos{animation: ma2 .5s ease-out forwards;}
+#a3:hover ~ #photos{animation: ma3 .5s ease-out forwards;}
+#a4:hover  ~ #photos{animation: ma4 .5s ease-out forwards;}
+#a5:hover  ~ #photos {animation: ma5 .5s ease-out forwards;}
+@keyframes ma1 {0%{margin-left:-6080px;}100%{margin-left:-0px;}	}
+@keyframes ma2 {0%{margin-left:-6080px;}100%{margin-left:-1520px;}	}
+@keyframes ma3 {100%{margin-left:-3040px;}	}
+@keyframes ma4 {100%{margin-left:-4560px;}	}
+@keyframes ma5 {100%{margin-left:-6080px;}	}
+.zong img{
+    width: 800px;
+    height: 400px;
+}
+#one img{
+    float: left;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+#one span{
+    float: right;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+#two img{
+     float: right;
+    border-radius: 10px;
+    margin-top: 10px;
+
+}
+#two span{
+    float: left;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+#three img{
+    float: left;
+    border-radius: 10px;
+    margin-top: 10px;
+
+}
+#three span{
+    float: right;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.zong span{
+    display: block;
+    width: 660px;
+    height: 360px;
+    background-color: #90C9ED;
+    text-indent: 2em;
+    font-size: 20px;
+    line-height: 50px;
+    padding: 20px;
+}

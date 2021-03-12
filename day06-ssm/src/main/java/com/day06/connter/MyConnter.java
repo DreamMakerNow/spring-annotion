@@ -22,4 +22,8 @@ public class MyConnter {
         model.addAttribute("list",blogs);
         return "test";
     }
+    @RequestMapping("/lg")
+    public String login(){
+        return "test";
+    }
 }

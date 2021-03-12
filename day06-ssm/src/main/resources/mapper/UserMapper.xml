@@ -6,4 +6,10 @@
     <select id="selectAllUser" resultType="User">
         select * from user
     </select>
+    <select id="getUserByName" resultType="User">
+        select * from user where name=#{name}
+    </select>
+    <select id="getPwd" resultType="string">
+        select pwd from user where name=#{name}
+    </select>
 </mapper>

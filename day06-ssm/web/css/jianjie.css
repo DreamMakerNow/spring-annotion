@@ -1,0 +1,40 @@
+html,body{
+    height: 100%;
+    width: 1535px;
+    padding: 0;
+    margin: 0;
+}
+.zong{height: 100%;
+position: relative}
+.top{
+    background: url("../imgs/jianjietop.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 50%;
+    /*background-color: #3fa9dd;*/
+}
+.left{
+    height: 50%;
+    width: 40%;
+    background: #ffcc00;
+    float:left;
+    margin:10px;
+}
+p{
+    text-indent: 2em;
+}
+.right{
+    height: 50%;
+    width: 56.7%;
+    background: #8AE1E8;
+    float:left;
+    margin:10px 1px 10px 0;
+    text-align: center;
+}
+.kong{
+    width: 180px;
+}
+td{
+    border-bottom: 1px dotted #999;
+    padding: 10px;
+}

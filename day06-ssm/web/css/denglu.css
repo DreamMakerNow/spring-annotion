@@ -1,0 +1,52 @@
+body{
+    background: url("../imgs/jianbian2.jpg");
+    background-size: cover;
+}
+div{
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+    position: relative;
+    left: 35%;
+    top: 30%;
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+table{
+    margin: 50px auto;
+}
+tr{
+    line-height: 60px;
+}
+.name{
+    background: url("../imgs/name.png");
+    /*background-size: 100% 50px;*/
+    background-position: 10px -13px;
+
+}
+.mima{
+    background: url("../imgs/mima.png");
+    background-position: 10px -13px;
+}
+input{
+    text-indent: 5em;
+    background-color: #F2F2F2;
+    border: 0;
+    width: 300px;
+    height: 30px;
+    /*line-height: 50px;*/
+    border-radius: 50px;
+}
+input:focus{
+    outline: none;
+}
+.submit{
+    text-indent: 0;
+    background-color: #00B6ED;
+    color: #fff;
+    font-weight: bold;
+    height: 50px;
+}
+td img{
+    margin-left: 50px;
+}

@@ -1,0 +1,266 @@
+html,body{
+    height: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+#zong{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 50%;
+    /*background-color: #7f49a3;*/
+}
+#x1{
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background-color: #121616;
+}
+button{
+    width: 0;
+    height: 0;
+    border: 0;
+    cursor: pointer;
+}
+#close{
+    background: url("../imgs/home.png");
+    float: left;
+}
+#begin{
+    background: url("../imgs/xuan.png");
+    float: right;
+}
+.q1 li{
+    line-height: 70px;
+    text-align: center;
+}
+.q1 a{
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #999;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+.q1 a:hover{
+    color: #7f49a3;
+    background-color: #fff;
+    border-top: 2px solid #ffcc00;
+}
+#zong #topline {
+    text-align: center;
+    background:  #90C9ED;
+    width: 100%;
+    height: 0;
+}
+#zong #topline span{
+    font:  30px "微软雅黑 Light";
+    color: black;
+}
+#header img{
+    width: 100%;
+    position: relative;
+    z-index: -2;
+    top:0;
+}
+li{list-style-type: none;}
+#zong #header .nv{
+    position: absolute;
+    top: 100px;
+}
+#header .nv ul{
+    border: 3px solid #007AC5;
+    margin-left: 2em;
+}
+#header .nv ul li{
+    position: relative;
+    float: left;
+}
+
+#header .nv ul .line{
+    height: 40px;width: 2px;background-color: #FFFFFF;
+}
+#header .nv ul li a{
+    background-color: #90C9ED;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    overflow: hidden;
+    line-height: 0;
+}
+#header .nv ul li a:hover{
+    transform: translate(-10px,10px) scale(1.1);
+    overflow: hidden;
+    color: #fff;
+    background-color: #007AC5;
+    transition: 0.5s all;
+}
+#header .nv ul li:hover a{
+    background-color: #007AC5;
+    line-height: 50px;
+}
+#header .nv ul li a:first-child{
+    height: 42px;
+    line-height: 42px;
+}
+#header .nv ul li{
+    list-style-type: none;
+    background-color: #999999;
+    text-align: center;
+    width: 100px;
+}
+img{
+    width: 100%;
+    position: relative;
+}
+#zong #o2{
+    background-color: #F0DDC5;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#zong #o2 .o1{
+    width: 50%;
+}#zong #o2 .o2{
+    width: 50%;
+}
+.top1{
+    height: 140px;
+    text-align: center;
+    margin: 10px 10px 0 10px;
+}
+.top1 span{
+    font:italic  100px "华文行楷";
+    color: black;
+}
+
+ .top{
+    display: flex;
+}
+.line-left{
+    background-color: #0079c5;
+    width: 40%;
+    height: 1px;
+    margin-top: 10px;
+}
+.line-right{
+    background-color: #0079c5;
+    width: 40%;
+    height: 1px;
+    margin-top: 10px;
+}
+span{
+    color:#0079C5;
+    font-size:16px;
+    width: 20%;
+    text-align: center;
+}
+.photo .imgs img{
+    width: 315px;height: 230px;
+}
+ .photo {
+    margin: 10px;
+    float: left;
+    width:315px;
+    height:230px;
+    position:relative;
+    overflow:hidden;
+}
+.photo .imgs img:hover{
+    transform: scale(1.4);
+}
+.imgs {
+    width:1650px;
+    -webkit-animation:pingyi 10s 1s infinite;
+}
+
+@keyframes pingyi{
+    0%,15% {
+        margin-left:0;
+    }
+
+    25%,40% {
+        margin-left:-315px;
+    }
+
+    50%,65% {
+        margin-left:-630px;
+    }
+
+    75%,90% {
+        margin-left:-945px;
+    }
+
+    100% {
+        margin-left:-1230px;
+    }
+}
+
+
+.content ul{
+    float: left;
+    margin-top: 10px;
+}
+.content ul li{
+    margin-bottom: 10px;
+    width: 380px;
+    height: 40px;
+    overflow: hidden;
+}
+ .content img{
+    width: 50px;height: 40px;
+     float: left;
+     margin-right: 10px;
+}
+ .content span{
+     /*position: absolute;*/
+     /*overflow: hidden;*/
+     height: 40px;
+ }
+.content ul li a{
+    position: relative;
+    text-decoration: none;
+    display: block;
+    width: 330px;
+}
+.video video{
+    margin-top: 10px;
+    width: 100%;
+
+}
+
+@media screen and (max-width: 800px) {
+    #zong #topline {
+        height: 48px; }
+    .nv{
+        z-index: -99;
+    }
+    #zong #o2 .o1{
+        /*background-color: #00FF00;*/
+        width: 100%;
+    } #zong #o2 .o2{
+        width: 100%;
+    }
+    .photo{
+        margin-left: 80px ;
+    }
+    .content{
+        margin-left: 50px;
+    }
+    #zong #topline img{
+        width: 48px;
+        height: 48px;
+    }
+    #zong #topline #right{
+        float: right;
+    }
+    #zong #topline #left{
+        float: left;
+    }
+    button{
+        height: 48px;width: 57px;
+    }
+}

@@ -29,10 +29,13 @@ public class ssmTest {
     public void test1() {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(Appconfig1.class);
         UserDao user =(UserDao) ctx.getBean("userDao");
-        List<User> users = user.selectAllUser();
-        for (User user1 : users) {
-            System.out.println(user1);
-        }
+//        List<User> users = user.selectAllUser();
+//        for (User user1 : users) {
+//            System.out.println(user1);
+//        }
+        String pwd = user.getPwd("范蹦");
+        System.out.println(user.getUserByName("范蹦"));
+        System.out.println("pwd = " + pwd);
     }
 
     @Test//用于测试：

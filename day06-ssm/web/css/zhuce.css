@@ -1,0 +1,84 @@
+body{
+    background: url("imgs/渐变.jpg");
+    background-size: cover;
+}
+input{
+    border: 0;
+    border-radius: 10px;
+    background-color: #B2E0DF;
+    font-size: 15px;
+    height: 40px;
+    width: 300px;
+}
+input:focus{
+    outline: 0;
+    border-radius: 50px;
+}
+h1{
+    background-color: #3fa9dd;
+}
+.top{
+    top: -4%;
+    left: 35%;
+}
+img{
+    border-radius: 70px;
+
+}
+div{
+    position: absolute;
+}
+*{
+    font-size: 25px;
+}
+#one{
+    top: 40%;
+    left: 40%;
+}
+#two{
+    top: 50%;
+    left: 40%;
+}
+#three{
+    top: 60%;
+    left: 40%;
+}
+#four{
+    top: 70%;
+    left: 40%;
+}
+button{
+    width: 440px;
+    background-color: #999;
+    border: 0;
+}
+.shuang{
+     -webkit-animation:mymoveshuang 3s linear;  /* mymove绑定到动画，webkit内核 */
+ }
+.dan{
+    -webkit-animation:mymovedan 3s linear;  /* mymove绑定到动画，webkit内核 */
+}
+
+@-webkit-keyframes mymovedan {       /* 创建关键帧动画，webkit内核 */
+    0%{
+        left: 0;
+    }
+    50%{
+        left: 20%;
+    }
+    100%{
+        left: 40%;
+    }
+}
+@-webkit-keyframes mymoveshuang {
+    0%{
+        left: 100%;
+    }
+    50%{
+        left: 75%;
+    }
+    100%{
+        left: 40%;
+    }
+}
+
