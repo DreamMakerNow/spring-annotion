@@ -7,6 +7,7 @@ import com.day06.dao.BlogDao;
 import com.day06.dao.UserDao;
 import com.day06.pojo.Blog;
 import com.day06.pojo.User;
+import com.day06.service.BlogService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.testng.annotations.Test;
@@ -31,6 +32,16 @@ public class ssmTest {
         List<User> users = user.selectAllUser();
         for (User user1 : users) {
             System.out.println(user1);
+        }
+    }
+
+    @Test//用于测试：
+    public void test2() {
+        ApplicationContext ctx = new AnnotationConfigApplicationContext(Appconfig1.class);
+        BlogService blogService = (BlogService) ctx.getBean("blogServiceImpl");
+        List<Blog> blogs = blogService.queryBlog();
+        for (Blog blog : blogs) {
+            System.out.println(blog);
         }
     }
 }
